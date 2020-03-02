@@ -3,7 +3,7 @@ import "./style.css";
 
 function EmployeeCard(props) {
   return (
-    <div className="card">
+    <div className="card" id={props.id}>
       <div className="img-container">
         <img alt={props.name} src={props.image} />
       </div>

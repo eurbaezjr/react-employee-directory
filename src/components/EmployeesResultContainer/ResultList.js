@@ -8,7 +8,7 @@ function ResultList(props) {
    
       {props.results.map(result => (
         <EmployeeCard
-          removeEmployee={this.removeEmployee}
+          removeEmployee={result.removeEmployee}
           id={result.id}
           key={result.id}
           name={result.name}
