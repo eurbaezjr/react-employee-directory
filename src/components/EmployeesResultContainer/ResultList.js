@@ -5,18 +5,15 @@ function ResultList(props) {
   // Map over this.state.employees and render a EmployeeCard component for each employee object
   return (
     <ul className="list-group">
-   
-      {props.results.map(result => (
         <EmployeeCard
-          removeEmployee={result.removeEmployee}
-          id={result.id}
-          key={result.id}
-          name={result.name}
-          image={result.image}
-          occupation={result.occupation}
-          location={result.location}>
-        </EmployeeCard> 
-      ))}
+          {...props}
+          removeEmployee={props.removeEmployee}
+          id={props.id}
+          key={props.id}
+          name={props.name}
+          image={props.image}
+          occupation={props.occupation}
+          location={props.location}/>
     </ul>
   );
 }

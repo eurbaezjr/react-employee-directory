@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
 import employees from "./employees.json";
 import SearchForm from "./SearchForm";
 import ResultList from "./ResultList";
@@ -23,14 +22,12 @@ class EmployeesResultContainer extends Component {
   };
 
   removeEmployee = id => {
-    console.log(id)
-    // id.preventDefault();
+    id.preventDefault();
     // // Filter this.state.employees for employees with an id not equal to the id being removed
-    const employees = this.state.employees.filter(employee => employee.id !== id);
+    const results = this.state.results.filter(employee => employee.id !== id);
     // // Set this.state.employees equal to the new employees array
-    // this.setState({ employees });
+    this.setState({ results });
   };
-
 
   handleInputChange = event => {
     const name = event.target.name;
@@ -46,7 +43,6 @@ class EmployeesResultContainer extends Component {
     this.searchEmployees(this.state.search);
   };
 
-
   render() {
     return (
 
@@ -56,9 +52,19 @@ class EmployeesResultContainer extends Component {
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-        <ResultList 
-        results={this.state.results}
-        removeEmployee={this.removeEmployee()}/>
+        <ResultList results={this.state.results}>
+          {this.state.results.map(result => (
+            <EmployeeCard
+              removeEmployee={this.removeEmployee}
+              id={result.id}
+              key={result.id}
+              name={result.name}
+              image={result.image}
+              occupation={result.occupation}
+              location={result.location}>
+            </EmployeeCard>
+          ))}
+        </ResultList>
       </div>
     )
   }
