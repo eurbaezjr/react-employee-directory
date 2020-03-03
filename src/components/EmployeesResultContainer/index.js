@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import employees from "./employees.json";
 import SearchForm from "./SearchForm";
-import ResultList from "./ResultList";
 import EmployeeCard from "../EmployeeCard"
 
 
@@ -24,7 +23,7 @@ class EmployeesResultContainer extends Component {
   removeEmployee = id => {
     id.preventDefault();
     // // Filter this.state.employees for employees with an id not equal to the id being removed
-    const results = this.state.results.filter(employee => employee.id !== id);
+    const results = this.state.employees.filter(employee => employee.id !== id);
     // // Set this.state.employees equal to the new employees array
     this.setState({ results });
   };
@@ -52,7 +51,6 @@ class EmployeesResultContainer extends Component {
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-        <ResultList results={this.state.results}>
           {this.state.results.map(result => (
             <EmployeeCard
               removeEmployee={this.removeEmployee}
@@ -64,7 +62,6 @@ class EmployeesResultContainer extends Component {
               location={result.location}>
             </EmployeeCard>
           ))}
-        </ResultList>
       </div>
     )
   }
