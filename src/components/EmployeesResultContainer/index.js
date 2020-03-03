@@ -7,58 +7,59 @@ import EmployeeCard from "../EmployeeCard"
 
 
 class EmployeesResultContainer extends Component {
-    state = {
-      search: "",
-      results: employees,
-      employees: employees
-    }
+  state = {
+    search: "",
+    results: employees,
+    employees: employees
+  }
 
-    searchEmployees = search => {
-      search.preventDefault();
-      // Filter this.state.employees for employees with a name,location,or occupation that is approximate to the search made by user
-      const results = this.state.employees.filter(result => 
-        result.name.indexOf(search) !== -1 || result.occupation.indexOf(search) !== -1 || result.location.indexOf(search) !== -1);
-      this.setState({results});
+  searchEmployees = search => {
+    //search.preventDefault();
+    // Filter this.state.employees for employees with a name,location,or occupation that is approximate to the search made by user
+    const results = this.state.employees.filter(result =>
+      result.name.toLowerCase().indexOf(search) !== -1 || result.occupation.toLowerCase().indexOf(search) !== -1 || result.location.toLowerCase().indexOf(search) !== -1);
+    this.setState({ results });
 
-    };
+  };
 
-    removeEmployee = id => {
-      id.preventDefault();
-      // Filter this.state.employees for employees with an id not equal to the id being removed
-      const employees = this.state.employees.filter( employee => employee.id !== id);
-      // Set this.state.employees equal to the new employees array
-      this.setState({ employees });
-    };
+  removeEmployee = id => {
+    console.log(id)
+    // id.preventDefault();
+    // // Filter this.state.employees for employees with an id not equal to the id being removed
+    const employees = this.state.employees.filter(employee => employee.id !== id);
+    // // Set this.state.employees equal to the new employees array
+    // this.setState({ employees });
+  };
 
-  
-    handleInputChange = event => {
-      const name = event.target.name;
-      const value = event.target.value;
-      this.setState({
-        [name]: value
-      });
-    };
-  
-    // When the form is submitted, search the Employees JSON for `this.state.search`
-    handleFormSubmit = event => {
-      event.preventDefault();
-      this.searchEmployees(this.state.search);
-    };
+
+  handleInputChange = event => {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  // When the form is submitted, search the Employees JSON for `this.state.search`
+  handleFormSubmit = event => {
+    event.preventDefault();
+    this.searchEmployees(this.state.search);
+  };
 
 
   render() {
     return (
-    
-    <div>
+
+      <div>
         <SearchForm
           search={this.state.search}
           handleFormSubmit={this.handleFormSubmit}
           handleInputChange={this.handleInputChange}
         />
-        <ResultList results={this.state.results}>
-        <EmployeeCard removeEmployee={this.removeEmployee}/>
-        </ResultList>
-    </div>
+        <ResultList 
+        results={this.state.results}
+        removeEmployee={this.removeEmployee()}/>
+      </div>
     )
   }
 }
