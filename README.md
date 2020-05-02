@@ -18,7 +18,7 @@ A frontend React.js application that programmatically sorts information about em
 
 * In the root of the folder, there is a `package.json`, so make sure to `npm install`.
 
-* The dependencies are, [React](https://reactjs.org/) 
+* The dependencies are, [React.js](https://reactjs.org/) 
 
 ### Roster output
 
