@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Employees List</Title>
+        <Title>React Employee Directory Example</Title>
           <EmployeesResultContainer/>
       </Wrapper>
     );

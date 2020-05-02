@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 
 function SearchForm(props) {
   return (
@@ -14,9 +15,6 @@ function SearchForm(props) {
           placeholder="Search for an employee, occupation, or location"
           id="search"
         />
-        <button onClick={props.handleFormSubmit} className="btn btn-primary mt-3">
-          Search
-        </button>
       </div>
     </form>
   );

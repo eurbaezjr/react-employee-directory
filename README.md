@@ -1,6 +1,6 @@
 # Employee Directory Application
 
-![Example 1](./Media/demo.gif) 
+![Example 1](./media/demo.gif) 
 
 A frontend React.js application that programmatically sorts information about employees. The application's core focus is to view non-sensitive data about other employees in the organization. 
 
@@ -10,7 +10,7 @@ A frontend React.js application that programmatically sorts information about em
 
 ## Functionality & User Input
 
-* The application has a search bar input field that allows the user to quickly search for any employee name, occupation and location in the organization. As an example, I used a series of characters from the cartoon 'SpongeBob SquarePants'.
+* The application has a search bar input field that allows the user to quickly search for any employee name, occupation and location in the organization. As an example, I used a series of cartoon characters.
 
 * Created modular react classes and functional components to allow for scalability.
 
