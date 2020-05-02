@@ -1,59 +1,31 @@
-Unit 19 React Homework: Employee Directory
+# Employee Directory Application
 
-Overview
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
+![Example 1](./Media/demo.gif) 
 
-User Story
+A frontend React.js application that programmatically sorts information about employees. The application's core focus is to view non-sensitive data about other employees in the organization. 
 
-As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+## Website Example
 
+* http://eurbaezjr.github.io/react-employee-directory
 
-Business Context
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
+## Functionality & User Input
 
-Acceptance Criteria
-Given a table of random users, when the user loads the page, a table of employees should render.
-The user should be able to:
+* The application has a search bar input field that allows the user to quickly search for any employee name, occupation and location in the organization. As an example, I used a series of characters from the cartoon 'SpongeBob SquarePants'.
 
+* Created modular react classes and functional components to allow for scalability.
 
-Sort the table by at least one category
+## Installing Instructions
 
+* In the root of the folder, there is a `package.json`, so make sure to `npm install`.
 
-Filter the users by at least one property.
+* The dependencies are, [React](https://reactjs.org/) 
 
+### Roster output
 
-Commit Early and Often
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
+The application solely returns items to the user that match the search.
 
+  * Name
 
-Your commit history is a signal to employers that you are actively working on projects and learning new skills
+  * Role
 
-
-Your commit history allows you to revert your code base in the event that you need to return to a previous state
-
-
-Follow these guidelines for committing:
-
-
-Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
-
-
-Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
-
-
-Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-
-Test your application before you commit to ensure functionality at every step in the development process
-
-
-We would like you to have well over 200 commits by graduation, so commit early and often!
-
-Submission on BCS
-You are required to submit the following:
-
-
-the URL to the deployed application
-
-
-the URL to the Github repository
+  * Location
