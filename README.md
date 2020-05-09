@@ -1,6 +1,6 @@
 # Employee Directory Application
 
-![Example 1](./demo.gif) 
+![Example 1](./search-demo.gif) 
 
 A frontend React.js application that programmatically sorts information about employees. The application's core focus is to view non-sensitive data about other employees in the organization. 
 
