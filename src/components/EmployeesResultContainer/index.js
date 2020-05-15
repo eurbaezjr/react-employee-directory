@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import employees from "./employees.json";
-import SearchForm from "./SearchForm";
+import SearchForm from "../SearchForm";
 import EmployeeCard from "../EmployeeCard";
 import Wrapper from "../Wrapper";
 import "./style.css";
@@ -51,7 +51,7 @@ class EmployeesResultContainer extends Component {
           search={this.state.search}
           handleInputChange={this.handleInputChange}
         />
-        <Wrapper>
+
         <div className='row'>
           {this.state.results.map(result => (
             <EmployeeCard
@@ -65,7 +65,7 @@ class EmployeesResultContainer extends Component {
             </EmployeeCard>
           ))}
           </div>
-          </Wrapper>
+    
       </div>
     )
   }

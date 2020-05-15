@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css"
+import Container from "../Container"; 
 
 function SearchForm(props) {
   return (

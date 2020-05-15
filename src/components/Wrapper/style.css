@@ -8,4 +8,5 @@
   justify-content: space-around;
   align-content: flex-start;
   overflow: auto;
+  background-image: linear-gradient( white, #6caddc);
 }
