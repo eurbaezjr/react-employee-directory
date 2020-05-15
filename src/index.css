@@ -10,5 +10,5 @@ html, body, #root {
 }
 
 body {
-  background-image: linear-gradient(red, yellow);
+  background-image: linear-gradient( white, #6caddc);
 }
